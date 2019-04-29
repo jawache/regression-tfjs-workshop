@@ -17,7 +17,7 @@ console.log(res.dataSync());
 // We want tensorflow to iteratively adjust the value of x so that x = ys return 0.
 // So basically we expect x to to go to 0
 
-const learningRate = 0.001; // TODO: Play arround with the learning weight. Show how a low value for learning rate will get us closer to 0 but will take a long time doing so. If we choose a high value the learning speed will be faster but won't get close to 0.
+const learningRate = 0.001;
 const optimizer = tf.train.sgd(learningRate); // We create the optimiser, this is a version called stochastic gradient decent
 
 // We call optimiser.minimse and pass it a function
@@ -30,7 +30,7 @@ optimizer.minimize(() => {
   return ys
     .mul(x)
     .mean()
-    .abs();
+    .square();
 });
 console.log(x.dataSync()); // You can see the second time it runs through the value of x should go down
 
@@ -38,12 +38,11 @@ console.log(x.dataSync()); // You can see the second time it runs through the va
 // normally however we run multiple epochs
 
 for (let i = 0; i < 1000; i++) {
-  tf.tidy(() => {});
   optimizer.minimize(() => {
     return ys
       .mul(x)
       .mean()
-      .abs();
+      .square();
   });
   console.log(x.dataSync());
 }
@@ -62,3 +61,9 @@ for (let i = 0; i < 200; i++) {
     console.log(x.dataSync());
   });
 }
+
+/*
+TODO: Play around with the learning weight. Show how a low value for learning rate will get us closer to 0 but will take a long time doing so. If we choose a high value the learning speed will be faster but won't get close to 0.
+*/
+
+//=================================================================//

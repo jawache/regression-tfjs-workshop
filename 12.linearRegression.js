@@ -123,7 +123,7 @@ function draw_points() {
 function draw_line() {
   stroke(51);
   const x1 = denormX(0); // Start on the furthest left
-  const y1 = denormY(getY(x1)); // Get the y value for this
+  const y1 = denormY(getY(0)); // Get the y value for this
   const x2 = denormX(1); // End on the furthest right
   const y2 = denormY(getY(1)); // Get the y value for this
   line(x1, y1, x2, y2);
