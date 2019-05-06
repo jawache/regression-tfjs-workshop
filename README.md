@@ -14,8 +14,8 @@ Learn regression analysis with Tensorflow.js!
 git clone https://github.com/jawache/regression-tfjs-workshop
 ```
 ## How to Run
-
-1. [Install]https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer 
+1. [Install](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) Live Server Extension for Visual Studio Code.
+2. Press "Go Live" to run. ![](https://github.com/ritwickdey/vscode-live-server/raw/master/images/Screenshot/vscode-live-server-statusbar-3.jpg)
 ## Useful Links
 
 - [Training Tensorflow Models](https://www.tensorflow.org/js/guide/train_models)
