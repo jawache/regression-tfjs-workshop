@@ -43,6 +43,7 @@ a.print();
 var a = tf.tensor([4, 5, 6]);
 var a = tf.tensor1d([4, 5, 6]);
 var a = tf.tensor([4, 5, 6], [3]);
+var a = tf.tensor([4, 5, 6], [3]);
 console.log(a.rank);
 console.log(a.shape);
 a.print();
