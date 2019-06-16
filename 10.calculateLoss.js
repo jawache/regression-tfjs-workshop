@@ -63,7 +63,7 @@ function loss() {
     // Get the nromalised value of y for the click
     let y = Ys[i];
     // Then use the equation of the line to get a value for y of the line
-    let predictedY = normY(getY(x));
+    let predictedY = normY(getY(denormX(x)));
 
     // For each mouse click, the x of the mouse click and the x of the line is going to be the same. What is different is the y of the mouse click and the y of the line. We figure out the squared distance between those
     squaredDiff += Math.pow(predictedY - y, 2);
